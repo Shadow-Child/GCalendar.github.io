@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-signin-client_id" content="224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com">
     <link rel="stylesheet" href="/ressources/style.css">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 
     <title>Document</title>
 </head>
@@ -21,26 +20,14 @@
         
         <!--GOOGLE_AUTHENTICATION_BUTTON-->
 
-        <div id="my-signin2"></div>
-        <script>
-            function onSuccess(googleUser) {
-            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-            }
-            function onFailure(error) {
-            console.log(error);
-            }
-            function renderButton() {
-            gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 240,
-                'height': 50,
-                'longtitle': true,
-                'theme': 'dark',
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-            });
-            }
-        </script>
+
+   <div id="g_id_onload"
+         data-client_id="224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+    <div class="g_id_signin" data-type="standard"></div>
+    
+         <!--GOOGLE_AUTHENTICATION_BUTTON_END-->
 
 
         <h2 class="headline">Privacy Policy</h2>
