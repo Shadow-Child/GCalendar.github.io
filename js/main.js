@@ -1,3 +1,3 @@
 function handleToken(){
-    document.getElementById("text").style.color = "blue";
+    document.getElementById("text").classList.replace("newHeadline");
 }
