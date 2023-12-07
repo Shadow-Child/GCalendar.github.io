@@ -18,31 +18,7 @@
 
         <p>You need to authorize the app with the following link:</p>
         
-        <!--GOOGLE_AUTHENTICATION_BUTTON-->
-
-
-   <div id="g_id_onload"
-     data-client_id="224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com"
-     data-context="signin"
-     data-ux_mode="popup"
-     data-auto_prompt="false"
-     data-auto_select="false"
-     >
-    
-</div>
-
-<div class="g_id_signin"
-     data-type="standard"
-     data-shape="pill"
-     data-theme="outline"
-     data-text="signin_with"
-     data-size="large"
-     data-logo_alignment="left">
-</div>
-    
-         <!--GOOGLE_AUTHENTICATION_BUTTON_END-->
-
-
+      
         <h2 class="headline">Privacy Policy</h2>
         <p> This app connects to the Google Calendar API to fetch your calendars and events,
             so that it can calculate events hours.
@@ -58,6 +34,7 @@
   window.onload = function () {
     google.accounts.id.initialize({
       client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
+      ux_mode: "popup",
       callback: handleCredentialResponse
     });
     google.accounts.id.prompt();
