@@ -41,6 +41,16 @@
           callback: handleCredentialResponse,
           context: "signin",
         });
+          
+//------------------------------
+        google.accounts.oauth2.initTokenClient({
+  client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
+  scope: 'https://www.googleapis.com/auth/calendar.readonly',
+  callback: handleCredentialResponse,
+});
+
+//----------------------------------
+          
         google.accounts.id.renderButton(
           document.getElementById("googleButtonDiv"),
           { theme: "filled_blue",shape:"pill", size: "large", type:"standard" }  // customization attributes
@@ -48,15 +58,7 @@
       }  
 
         
-// Just a separation line
-        window.onload = function client () { 
-  google.accounts.oauth2.initTokenClient({
-  client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
-  scope: 'https://www.googleapis.com/auth/calendar.readonly',
-  callback: handleCredentialResponse,
-});
-        }
-        
+       
 </script>
 
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
