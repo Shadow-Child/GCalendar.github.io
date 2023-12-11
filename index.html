@@ -36,6 +36,7 @@
       window.onload = function () {
         google.accounts.id.initialize({
           client_id: "224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com",
+          scoopes: "https://www.googleapis.com/auth/calendar.readonly",
           callback: handleCredentialResponse,
           context: "signin",
         });
