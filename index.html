@@ -49,14 +49,13 @@
 
         
 // Just a separation line
-        const client = google.accounts.oauth2.initTokenClient({
+        window.onload = function client () { 
+  google.accounts.oauth2.initTokenClient({
   client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
   scope: 'https://www.googleapis.com/auth/calendar.readonly',
-  callback: (response) => {
-    console.log(response)
-  },
+  callback: handleCredentialResponse,
 });
-
+        }
         
 </script>
 
