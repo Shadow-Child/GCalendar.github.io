@@ -19,7 +19,7 @@
         <p>You need to authorize the app with the following link:</p>
 
 
-        <button onclick="client.requestAccessToken;">Authorize me</button>
+        <button onclick="window.onload.requestAccessToken;">Authorize me</button>
 
         
         <h2 class="headline">Privacy Policy</h2>
@@ -33,13 +33,12 @@
 
     
 //------------------------------
-    window.onload= client()
-  function client(){ 
+  window.onload= function (){ 
       google.accounts.oauth2.initTokenClient({
   client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
   scope: 'https://www.googleapis.com/auth/calendar.readonly',
   callback: (response)=>{
-      return response;
+      console.log(response);
   }
 });
 }
