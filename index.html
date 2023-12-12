@@ -19,7 +19,7 @@
         <p>You need to authorize the app with the following link:</p>
 
 
-        <button id="googleButtonDiv" onclick="client.requestAccessToken();">Authorize me</button>
+        <button onclick="client.requestAccessToken();">Authorize me</button>
 
         
         <h2 class="headline">Privacy Policy</h2>
@@ -41,17 +41,9 @@
   }
 });
 
-window.onload = client();
 
 //----------------------------------
-          
-        google.accounts.id.renderButton(
-          document.getElementById("googleButtonDiv"),
-          { theme: "filled_blue",shape:"pill", size: "large", type:"standard" }  // customization attributes
-        );
-        
-
-        
+      
        
 </script>
 
