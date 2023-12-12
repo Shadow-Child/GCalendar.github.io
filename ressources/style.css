@@ -11,3 +11,27 @@
     margin: auto;
 }
 
+
+#ButtonDiv{
+    display: flex;
+    font-family: "Google Sans","arial","sans-serif";
+    position: relative;
+    width: 260px;
+    height: 44px;
+    background-color:  #1a73e8 ;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-weight: 500;
+    align-items: center; 
+}
+
+#ButtonDiv span{
+    margin: auto;
+}
+
+#ButtonDiv:hover{
+background-color:#5195ee;
+transition: background-color 0.3s ease;
+cursor: pointer;
+}
