@@ -18,9 +18,8 @@
 
         <p>You need to authorize the app with the following link:</p>
 
-
-        <button onclick="window.onload.requestAccessToken;">Authorize me</button>
-
+        <div id="googleButtonDiv"  onclick="client.requestAccessToken;"></div>
+        
         
         <h2 class="headline">Privacy Policy</h2>
         <p> This app connects to the Google Calendar API to fetch your calendars and events,
@@ -33,15 +32,22 @@
 
     
 //------------------------------
-  window.onload= function (){ 
-      google.accounts.oauth2.initTokenClient({
+
+google.accounts.id.renderButton(
+          document.getElementById("googleButtonDiv"),
+          { theme: "filled_blue",shape:"pill", size: "large", type:"standard" }  // customization attributes
+        );
+      }
+        
+    const client = 
+  google.accounts.oauth2.initTokenClient({
   client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
   scope: 'https://www.googleapis.com/auth/calendar.readonly',
   callback: (response)=>{
       console.log(response);
   }
 });
-}
+
 
 //----------------------------------
       
