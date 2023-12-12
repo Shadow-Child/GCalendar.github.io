@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./ressources/style.css">
-    <script src="https://accounts.google.com/gsi/client" onload="console.log('TODO: add onload function')" async></script>
+    <script src="https://accounts.google.com/gsi/client" async></script>
 
     <title>Document</title>
 </head>
@@ -29,11 +29,11 @@
             There are no server or services involved that might cache the data.</p>
         <p>This app only has read-only access to your calendar data</p>
     </div>
-    <script>
+    <script onload="client()" >
 
     
 //------------------------------
-        google.accounts.oauth2.initTokenClient({
+       const client = google.accounts.oauth2.initTokenClient({
   client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
   scope: 'https://www.googleapis.com/auth/calendar.readonly',
   callback: (response)=>{
