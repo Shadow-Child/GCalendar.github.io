@@ -26,8 +26,10 @@
     align-items: center; 
 }
 
-#ButtonDiv span{
+a, a:hover, a:visited, a:active {
     margin: auto;
+    color: inherit;
+    text-decoration: none;
 }
 
 #ButtonDiv:hover{
