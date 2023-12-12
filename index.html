@@ -18,9 +18,8 @@
 
         <p>You need to authorize the app with the following link:</p>
 
-        <div id="googleButtonDiv"></div>
 
-        <button onclick="client.requestAccessToken();">Authorize me</button>
+        <button id="googleButtonDiv" onclick="client.requestAccessToken();">Authorize me</button>
 
         
         <h2 class="headline">Privacy Policy</h2>
@@ -32,21 +31,14 @@
     </div>
     <script>
 
-      function handleCredentialResponse(response) {
-        console.log(response);
-      }
-      window.onload = function () {
-        google.accounts.id.initialize({
-          client_id: "224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com",
-          callback: handleCredentialResponse,
-          context: "signin",
-        });
-          
+    
 //------------------------------
         google.accounts.oauth2.initTokenClient({
   client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
   scope: 'https://www.googleapis.com/auth/calendar.readonly',
-  callback: handleCredentialResponse,
+  callback: (response)=>{
+      console.log("this is your token: " + response)
+  }
 });
 
 //----------------------------------
