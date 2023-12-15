@@ -19,7 +19,7 @@
         <p>You need to authorize the app with the following link:</p>
 
        
-        <div id="ButtonDiv" onclick="client.requestCode();;">
+        <div id="ButtonDiv" onclick="client.requestAccessToken();;">
             <img src="./ressources/images/IOS_Google_icon.png" style="padding:3px;width:39px">
             <span>Connect with Google</span>
         </div>
@@ -35,13 +35,15 @@
     </div>
     
 <script>
-        const client = google.accounts.oauth2.initCodeClient({
+
+    const client = google.accounts.oauth2.initTokenClient({
   client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
   scope: 'https://www.googleapis.com/auth/calendar',
-  ux_mode: 'redirect',
-  redirect_uri: "https://shadow-child.github.io/GCalendar.github.io/redirect.html",
-  state: "YOUR_BINDING_VALUE"
+  callback: (response) => {
+    console.log(response)
+  },
 });
+
       
 </script>
 
