@@ -41,10 +41,12 @@
   scope: 'https://www.googleapis.com/auth/calendar',
   callback: (response) => {
     if (response.access_token){
-        AcessToken=response.access_token.
+        AcessToken=response.access_token;
+        console.log(response);
         setTimeout(()=>{
             window.location='https://shadow-child.github.io/GCalendar.github.io/redirect.html'
-        }, 2000)
+        }, 2000);
+        console.log(response)
     }
   },
 });
