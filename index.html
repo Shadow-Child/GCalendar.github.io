@@ -35,20 +35,20 @@
     </div>
     
 <script>
-    let AcessToken;
+    let authJSON;
     const client = google.accounts.oauth2.initTokenClient({
-  client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
-  scope: 'https://www.googleapis.com/auth/calendar',
-  callback: (response) => {
-    if (response.access_token){
-        AcessToken=response.access_token;
-        console.log(response);
-        setTimeout(()=>{
-            window.location='https://shadow-child.github.io/GCalendar.github.io/redirect.html'
-        }, 5000);
-        console.log(response)
-    }
-  },
+      client_id: '224471295423-7l60qiok5f43gttir3sa96cmnihtoa60.apps.googleusercontent.com',
+      scope: 'https://www.googleapis.com/auth/calendar',
+      callback: (response) => {
+        if (response.access_token){
+            authJSON = response.access_token;
+            console.log(response);
+            /*setTimeout(()=>{
+                window.location='https://shadow-child.github.io/GCalendar.github.io/redirect.html'
+            }, 5000);*/
+            console.log(response)
+        }
+      },
 });
 
       
